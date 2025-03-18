@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <title>How many cm</title>
+</head>
+
+<body>
+  <main>
+        
+    <h1>How many cm</h1>
+    
+      <fieldset>
+        <label for="height">Enter a height: <span class="height_value value"></span></label><br />
+        <input type="range" id="height" value="" min="100" max="200" required />
+        
+
+        <label for="weight">Enter a weight: <span class="weight_value value"></span></label><br />
+        <input type="range" id="weight" value="" min="30" max="200" required />
+    
+        <label for="age">Enter a age: <span class="age_value value"></span></label><br />
+        <input type="range" id="age" value="" min="10" max="100" required/>
+        
+
+        <button type="button" id="btn">Result</button>
+
+        <div id="result" class="result hidden"></div>
+
+      </fieldset>
+ 
+ 
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
