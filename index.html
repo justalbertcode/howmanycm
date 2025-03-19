@@ -1,39 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>How many cm???</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <title>How many cm</title>
-</head>
+  <body>
+    <main>
+      <h1>How many cm???</h1>
 
-<body>
-  <main>
-        
-    <h1>How many cm</h1>
-    
       <fieldset>
-        <label for="height">Enter a height: <span class="height_value value"></span></label><br />
-        <input type="range" id="height" value="" min="100" max="200" required />
-        
+        <div class="radio_block">
+          <div class="man_block">
+            <input type="radio" id="man" name="gender" class="input_radio" checked/>
+            <label class="label_radio" for="man">Man</label><br />
+          </div>
 
-        <label for="weight">Enter a weight: <span class="weight_value value"></span></label><br />
-        <input type="range" id="weight" value="" min="30" max="200" required />
-    
-        <label for="age">Enter a age: <span class="age_value value"></span></label><br />
-        <input type="range" id="age" value="" min="10" max="100" required/>
-        
+          <div class="woman_block">
+            <input type="radio" id="woman" name="gender" class="input_radio" />
+            <label class="label_radio" for="woman">Woman</label><br />
+          </div>
+        </div>
+
+        <label class="label_range" for="height"
+          >Enter a height: <span class="height_value value"></span>cm</label
+        ><br />
+        <input
+          class="input_range"
+          type="range"
+          id="height"
+          value="160"
+          min="100"
+          max="200"
+          step="1"
+          required
+        />
+
+        <label class="label_range" for="weight"
+          >Enter a weight: <span class="weight_value value"></span>kg</label
+        ><br />
+        <input
+          class="input_range"
+          type="range"
+          id="weight"
+          value="86"
+          min="30"
+          max="200"
+          required
+        />
+
+        <label class="label_range" for="age"
+          >Enter a age: <span class="age_value value"></span>years</label
+        ><br />
+        <input
+          class="input_range"
+          type="range"
+          id="age"
+          value="37"
+          min="10"
+          max="100"
+          required
+        />
 
         <button type="button" id="btn">Result</button>
 
         <div id="result" class="result hidden"></div>
-
       </fieldset>
- 
- 
-  </main>
-  <script src="./script.js"></script>
-</body>
-
+    </main>
+    <script src="./script.js"></script>
+  </body>
 </html>
