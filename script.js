@@ -1,63 +1,71 @@
 const btn = document.getElementById("btn");
 const result = document.getElementById("result");
+const man = document.getElementById("man");
+const woman = document.getElementById("woman");
 
 // Inputs
-const height = document.getElementById("height").value;
-const weight = document.getElementById("weight").value;
-const age = document.getElementById("age").value;
+const height = document.getElementById("height");
+const weight = document.getElementById("weight");
+const age = document.getElementById("age");
 
 //Values
 const age_value = document.querySelector(".age_value");
 const height_value = document.querySelector(".height_value");
 const weight_value = document.querySelector(".weight_value");
 
-
+let a = Number(age.value)
+let h = Number(height.value);
+let w = Number(weight.value);
 
 function howManyCM() {
-  const a = Number(age);
-  const h = Number(height);
-  const w = Number(weight);
-
-  if(a ==='' || w ==='' || h ===''){
-    alert('Enter inputs number')
-    console.log(a, h, w)
-    return false;
-  } else if(h <=1 || w <=0 || a <=1){
-    console.log(a, h, w)
-    alert('Enter correct inputs number')
-    return false;
-  }
-  else {
-    const res = (h * 0.1) - (w / a)*0.95;
-    console.log(a, h, w)
-    return Number.parseFloat(res).toFixed(2);
-    
-  }
-  
+  const res = ((h * 0.09) - (w / a) - (a/99) + Math.random());
+  return Number.parseFloat(res).toFixed(1);
 }
 
 function putResult() {
-    if(!howManyCM()){
-        result.innerText = "Error!!!" 
-        return;
-    } else {
-        result.innerText = howManyCM() + " cm"
-        result.classList.remove('hidden');
-    }
-    
+  if(man.checked){
+    console.log("man")
+  }
+  if(woman.checked){
+    result.innerText = "Oops, it's 0 cm, because you are woman";
+    result.classList.remove("hidden");
+    return;
+  }
+  if(h/w >=4){
+    result.innerText = "It's unreal (0^0)";
+    result.classList.remove("hidden");
+    return;
+  }
+  if(a>90){
+    result.innerText = "Be glad that it hasn't dried up yet)";
+    result.classList.remove("hidden");
+    return;
+  }
+  result.innerText = howManyCM() + " cm";
+  result.classList.remove("hidden");
 }
 
+age_value.textContent = age.value;
+height_value.textContent = height.value;
+weight_value.textContent = weight.value;
+
+age.addEventListener("input", (event) => {
+  age_value.textContent = event.target.value;
+  a = Number(event.target.value);
+});
+
+height.addEventListener("input", (event) => {
+  height_value.textContent = event.target.value;
+  h = Number(event.target.value)
+});
+weight.addEventListener("input", (event) => {
+  weight_value.textContent = event.target.value;
+  w = Number(event.target.value)
+});
 
 
 btn.addEventListener("click", putResult);
 
-
-
-
-age_value.textContent = age;
-height_value.textContent = height;
-weight_value.textContent = weight;
-
-age.addEventListener("input", (event) => {
-    age_value.textContent = event.target.value;
-});
+if(man.checked){
+  console.log("man")
+}
