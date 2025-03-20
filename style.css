@@ -1,4 +1,127 @@
 :root {
+<<<<<<< HEAD
+  --black: #000000;
+  --white: #ffffff;
+  --green: #adffb1;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 350px;
+}
+
+fieldset {
+  border: 0 none;
+  width: 50%;
+  height: 100%;
+  padding: 25px;
+  margin: 10px 20px;
+}
+
+.label_range {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.radio_block {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.label_radio {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input_range {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 15px;
+  text-decoration: none;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+  padding: 10px 16px;
+  font-size: 23px;
+  width: 100%;
+}
+
+.result {
+  color: var(--black);
+  background-color: var(--green);
+  font-size: 2.5rem;
+  width: 100%;
+  min-height: 55px;
+  margin-top: 25px;
+  padding: 15px;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.value {
+  font-size: 2rem;
+  margin: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 1100px) {
+  fieldset {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  fieldset {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  fieldset {
+    width: 100%;
+  }
+  body {
+    padding: 5px;
+  }
+}
+=======
     --black: #000000;
     --white: #ffffff;
     --green: #adffb1;
@@ -133,3 +256,4 @@
       padding: 5px;
     }
   }
+>>>>>>> 1d1f32df451a700aca246cb5d72fe161566dae8d
