@@ -23,9 +23,12 @@ function howManyCM() {
 }
 
 function putResult() {
+<<<<<<< HEAD
+=======
   if(man.checked){
     console.log("man")
   }
+>>>>>>> 1d1f32df451a700aca246cb5d72fe161566dae8d
   if(woman.checked){
     result.innerText = "Oops, it's 0 cm, because you are woman";
     result.classList.remove("hidden");
@@ -48,6 +51,23 @@ function putResult() {
 age_value.textContent = age.value;
 height_value.textContent = height.value;
 weight_value.textContent = weight.value;
+<<<<<<< HEAD
+=======
+
+age.addEventListener("input", (event) => {
+  age_value.textContent = event.target.value;
+  a = Number(event.target.value);
+});
+
+height.addEventListener("input", (event) => {
+  height_value.textContent = event.target.value;
+  h = Number(event.target.value)
+});
+weight.addEventListener("input", (event) => {
+  weight_value.textContent = event.target.value;
+  w = Number(event.target.value)
+});
+>>>>>>> 1d1f32df451a700aca246cb5d72fe161566dae8d
 
 age.addEventListener("input", (event) => {
   age_value.textContent = event.target.value;
@@ -63,9 +83,11 @@ weight.addEventListener("input", (event) => {
   w = Number(event.target.value)
 });
 
-
 btn.addEventListener("click", putResult);
 
+<<<<<<< HEAD
+=======
 if(man.checked){
   console.log("man")
 }
+>>>>>>> 1d1f32df451a700aca246cb5d72fe161566dae8d
